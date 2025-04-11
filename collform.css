@@ -1,0 +1,467 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+
+li {
+    list-style: none;
+}
+
+.grid-container{
+    grid-template-rows: 20px 1fr 50px 50px 50px 20px;
+    grid-template-columns: 1fr;
+    grid-area:
+    'header'
+    'main'
+    'Editor-container'
+    'this-container'
+    'best-container'
+    'footer';
+}
+
+header {
+    /* background-color: rgb(221, 97, 165); */
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(232, 209, 248);
+    padding: 0 100px;
+    align-items: center;
+    height: 60px;
+    line-height: 60px;
+    /* 높이 가운데 정렬 */
+
+    li {
+        display: inline-block;
+        margin-right: 70px;
+    }
+
+    a {
+        /* color: rgb(181, 139, 221); */
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.header-top a:hover {
+    color: rgb(153, 147, 147);
+}
+
+.search-bar {
+    display: flex;
+
+    input {
+        /* background-color: rgb(245, 238, 253); */
+        width: 200px;
+        margin-left: 50px;
+        padding-left: 20px;
+        border: none;
+    }
+
+    button {
+        background-color: rgb(181, 139, 221);
+        color: aliceblue;
+        width: 60px;
+        height: 40px;
+        border: none;
+    }
+}
+
+button:hover {
+    background-color: rgb(153, 152, 152);
+}
+
+.header-text {
+    color: rgb(181, 139, 221);
+    text-align: center;
+    margin: 50px 30px;
+    height: 200px;
+    /* width: 700px; */
+
+
+    .logo {
+        color: rgb(181, 139, 221);
+        text-decoration: none;
+        margin-top: 50px;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 17px;
+        font-weight: bold;
+
+        .text {
+            font-size: 16px;
+        }
+    }
+}
+
+.header-caregory {
+    background-color: rgb(232, 209, 248);
+    height: 35px;
+    line-height: 35px;
+    padding: 0 100px;
+    /* width: 700px; */
+    text-align: center;
+}
+
+.header-caregory:hover {
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-item {
+    width: 90%;
+    gap: 100px;
+    text-align: center;
+}
+
+.menu-item:hover{
+    background-color: rgb(240, 184, 237);
+}
+
+.menu-items {
+    display: none;
+}
+
+.menu:hover .menu-items {
+    display: block;
+}
+
+.menu-items:hover {
+    background-color: rgb(240, 184, 237);
+}
+
+.main-container {
+    width: 100%;
+    position: relative;
+    /* border: 1px solid red; */
+    z-index: -1;
+}
+
+.fa-solid {
+    position: absolute;
+    cursor: pointer;
+}
+
+.fa-chevron-left {
+    top: 50%;
+    left: 100px;
+    font-size: 70px;
+    color: rgb(156, 156, 156);
+}
+
+.fa-chevron-right {
+    top: 50%;
+    right: 100px;
+    font-size: 70px;
+    color: rgb(156, 156, 156);
+}
+
+
+.fa-chevron-right {
+    right: 100;
+}
+
+.image-wrap {
+    cursor: pointer;
+    width: 1905px;
+    height: 600px;
+    position: relative;
+
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.image-wrap-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-wrap-item.active {
+    opacity: 1;
+}
+
+.Editor-container {
+    background-color: rgb(245, 238, 253);
+    padding: 100px;
+    margin: 60px 0px;
+
+
+
+    .Editor-wrap {
+        display: flex;
+        padding: 30px 50px;
+        justify-content: center;
+    }
+
+    .ed-pick {
+        color: rgb(181, 139, 221);
+        /* padding-left: 170px; */
+        font-size: 45px;
+        text-decoration: underline;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .blinking-text {
+        font-size: 13px;
+        padding-top: 10px;
+        animation: blank 1.5s infinite;
+    }
+
+    .editor {
+        color: rgb(39, 38, 38);
+        /* background-color: white; */
+        /* border: 5px solid hsl(271, 70%, 82%); */
+        border-radius: 20px;
+        text-align: center;
+        width: 250px;
+        cursor: pointer;
+
+        .face {
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+            }
+
+            div {
+                text-decoration: underline;
+                /* padding: 10px; */
+                font-weight: bold;
+                padding-bottom: 8px;
+            }
+
+            p {
+                line-height: 1.5;
+                /* text-align: center; */
+                font-size: 14px;
+                word-break: break-word;
+                text-align: center;
+                white-space: normal;
+            }
+        }
+    }
+
+    .editor-product {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
+        padding-left: 140px;
+    }
+
+    .editor-product-sang {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
+        padding-right: 140px;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        cursor: pointer;
+    }
+
+    div {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+
+.editor-product:hover {
+    color: rgb(153, 147, 147);
+    cursor: pointer;
+}
+
+.editor-product-sang:hover {
+    color: rgb(153, 147, 147);
+    cursor: pointer;
+}
+
+.ed-pick:hover {
+    color: rgb(154, 157, 160);
+}
+
+.this-container {
+    background-color: rgb(247, 247, 218);
+    cursor: pointer;
+
+    h2 {
+        color: rgb(181, 139, 221);
+        text-align: center;
+        font-size: 45px;
+        padding: 55px 0px;
+    }
+
+    .this-img {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        img {
+            align-items: center;
+            height: 500px;
+            width: 650px;
+        }
+
+        div {
+            text-align: center;
+            /* padding: 25px; */
+            margin: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            text-decoration: underline;
+        }
+    }
+}
+
+.this-img:hover {
+    color: rgb(108, 112, 116);
+}
+
+h2:hover {
+    color: rgb(131, 126, 126);
+}
+
+.best-container {
+    background-color: rgb(245, 238, 253);
+    margin: 55px 0px;
+    padding: 50px 0px;
+
+    h2 {
+        color: rgb(181, 139, 221);
+        /* padding-left: 170px; */
+        /* text-decoration: underline; */
+        font-size: 40px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .best-item {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+
+        div {
+            text-align: center;
+
+            img {
+                width: 220px;
+                height: 220px;
+                padding: 10px 0px;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+}
+
+h2:hover {
+    color: rgb(116, 119, 122);
+}
+
+.best-item:hover {
+    color: rgb(154, 155, 156);
+}
+
+.footer {
+    margin: 50px;
+    display: flex;
+    gap: 100px;
+
+    /* flex-direction: column; */
+
+    .fa-instagram {
+        font-size: 40px;
+        color: rgb(181, 139, 221);
+    }
+
+    .fa-square-facebook {
+        font-size: 40px;
+        color: rgb(181, 139, 221);
+    }
+
+
+    a {
+        text-decoration: none;
+        color: rgb(181, 139, 221);
+
+    }
+
+    .call-wrapper {
+        color: rgb(181, 139, 221);
+        font-size: 17px;
+    }
+}
+
+.footer:hover a {
+    color: rgb(120, 100, 233);
+}
+
+.footer:hover h3 {
+    cursor: pointer;
+}
+
+
+@keyframes blank {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .grid-container{
+        /* grid-template-rows: ;
+        grid-template-columns: 1fr;
+        grid-area:
+        'header'
+        'main'
+        'Editor-container'
+        'this-container'
+        'best-container'
+        'footer'; */
+        
+            width: 100%;
+            /* background-color: orange; */
+        
+    }
+    }
